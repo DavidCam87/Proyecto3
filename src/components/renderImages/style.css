@@ -45,3 +45,28 @@ button{
   background-color: rgb(255, 78, 78);
   color: white;
 }
+@media (max-width: 800px) {
+  h1 {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  input::placeholder {
+    color: transparent;
+  }
+  .logo {
+    margin-left: 0;
+  }
+  .clearBtn {
+    margin-right: 0;
+  }
+  ul{
+    margin: 0;
+    gap: 10px;
+  }
+}
