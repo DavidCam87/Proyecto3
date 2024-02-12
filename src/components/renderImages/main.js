@@ -1,4 +1,5 @@
 import "./style.css";
+import { renderFooter } from "../footer/main.js";
 
 export function renderImages(imagesData) {
   const imgsContainer = document.querySelector('.containerAll');

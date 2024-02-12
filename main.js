@@ -1,5 +1,6 @@
 //importamos la funcion que nos pinta todas las imagenes
 import { renderImages } from "./src/components/renderImages/main.js";
+import { renderFooter } from "./src/components/footer/main.js";
 
 // claves de acceso y endpoint de la API
 const accessKey = 'su7WLYZ89iidd5UZQxOCSGTjj9xuYwuU0JuZ6lbPY4E';
@@ -29,6 +30,10 @@ renderImages([]);
 
 //pintamos las imagenes obtenidas de la API
 getImages();
+
+renderFooter();
+
+
 
 // evento que limpia el campo de texto
 clearBtn.addEventListener('click', () => {
