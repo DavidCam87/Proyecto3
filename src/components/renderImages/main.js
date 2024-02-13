@@ -2,6 +2,13 @@ import "./style.css";
 import { renderFooter } from "../footer/main.js";
 
 export function renderImages(imagesData) {
+  if (imagesData.length === 0) {
+    const imgsContainer = document.querySelector('.containerAll');
+    imgsContainer.innerHTML = '<p class="noResults">No se han encontrado resultados</p>';
+    return;
+  };
+
+
   const imgsContainer = document.querySelector('.containerAll');
   imgsContainer.innerHTML = '';
   imagesData.forEach(imageData => {
@@ -16,7 +23,7 @@ export function renderImages(imagesData) {
     link.target = '_blank';
 
     image.src = imageData.urls.regular;// añadimos la url de la imagen 
-    image.alt = imageData.alt_description//añadimos la descripción de la imagen
+    image.alt = imageData.alt_description;//añadimos la descripción de la imagen
     title.textContent = imageData.alt_description || 'Sin descripción';// añadimos el texto de la descripción al pie de la imagen
 
     link.appendChild(image);
